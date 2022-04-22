@@ -11,13 +11,13 @@ void displayDoublyList(DoublyList* pList)
 		printf("현재 노드는 비어있습니다!!");
 	else
 	{
-		currNode = pList;
+		currNode = pList->headerNode.pRLink;
 		length = getDoublyListLength(pList);
 		printf("총 노드의 수는 %d개 입니다.\n", length);
 		i = 0;
 		while (currNode != NULL)
 		{
-			printf("node %d번째 요소는 : %d개 입니다.\n", i, currNode->data);
+			printf("node %d번째 요소는 : %d 입니다.\n", i, currNode->data);
 			i++;
 			currNode = currNode->pRLink;
 		}
