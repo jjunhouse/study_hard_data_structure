@@ -3,12 +3,12 @@
 
 #include <stdlib.h>
 
-typedef struct ArrayListNodeType
+typedef struct ArrayStackNodeType
 {
 	int data;
 } ArrayStackNode;
 
-typedef struct ArrayListType
+typedef struct ArrayStackType
 {
 	int maxElementCount;		// 최대 원소 개수
 	int currentElementCount;	// 현재 원소의 개수
@@ -30,6 +30,6 @@ int isArrayStackEmpty(ArrayStack* pStack);
 
 #define TRUE		1
 #define FALSE		0
-#define ERROR       -1
+#define ERROR		-1
 
 #endif
