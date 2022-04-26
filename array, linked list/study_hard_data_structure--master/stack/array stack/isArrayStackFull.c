@@ -1,6 +1,6 @@
 #include "arraystack.h"
 
-int isArrayListFull(ArrayStack* pStack)
+int isArrayStackFull(ArrayStack* pStack)
 {
 	if(!pStack)
 		return (ERROR);
