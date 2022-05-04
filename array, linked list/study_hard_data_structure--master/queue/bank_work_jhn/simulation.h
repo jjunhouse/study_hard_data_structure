@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "linkedQueue.h"
 
 typedef enum SimStatusType { arrival, start, end } SimStatus;
 
@@ -15,7 +16,7 @@ typedef struct SimCustomerType
     int endTime;// 종료 시각: 시작 시각 + 서비스 시간.
 } SimCustomer;
 
-void insertCutomer(int arrivalTime, int processTime, LinkedQueue *pQueue); //도착큐에 고객생성
+void insertCustomer(int arrivalTime, int processTime, LinkedQueue *pQueue); //도착큐에 고객생성
 void processArrival(int currentTime, LinkedQueue *pArrivalQueue, LinkedQueue *pWaitQueue); // 도착큐에서 대기큐로 디큐 앤 인큐
 QueueNode* processServiceNodeStart(int currentTime, LinkedQueue *pWaitQueue); //대기큐에서 받아서 서비스큐 디큐 하는 
 QueueNode* processServiceNodeEnd(int currentTime, QueueNode *pServiceNode, int *pServiceUserCount, int *pTotalWaitTime); // 

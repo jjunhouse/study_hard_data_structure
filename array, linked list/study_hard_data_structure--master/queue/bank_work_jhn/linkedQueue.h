@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "simulation.h"
 
 typedef	enum e_flag
 {
@@ -13,7 +14,7 @@ typedef	enum e_flag
 
 typedef struct QueueNodeType
 {
-	char 					data;
+	SimCustomer				customer
 	struct QueueNodeType	*pRLink;
 } QueueNode;
 
