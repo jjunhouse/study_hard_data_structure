@@ -28,16 +28,14 @@ int main(void)
 
     while (currTime <= 10) // 종료 시간인가...
     {
+        if (currTime + servicetime <= 10)
         printf ("현재시간 %d시 입니다.", currTime);
         processArrival(currTime, arrivalQ, waitQ); // 1번 고객 도착
         
-        if (processServiceNodeEnd(currTime, serviceNode, serviceUC, totalWT)->customer->endTime)
-        {
-            printf("%d번 서비스가 종료되었습니다. ", serviceUC);
-            serviceUC += 1;
-            if (processServiceNodeStart(currTime, waitQ)
-                printf("%d번 서비스가 시작되었습니다. ", serviceUC);
-        }    
+        serviceNode = processServiceNodeEnd(currTime, serviceNode, serviceUC, totalWT);
+
+        if (NULLCHECK(serviceNode))
+            processServicdNodeStart(currTime, waitQ);
 
         printWaitQueueStatus(currTime, waitQ); // 대기 큐 상태 출력
         currTime += 1;

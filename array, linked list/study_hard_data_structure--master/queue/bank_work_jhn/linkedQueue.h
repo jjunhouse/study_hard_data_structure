@@ -14,7 +14,7 @@ typedef	enum e_flag
 
 typedef struct QueueNodeType
 {
-	SimCustomer				customer
+	SimCustomer				custome
 	struct QueueNodeType	*pRLink;
 } QueueNode;
 
